@@ -1,7 +1,9 @@
+import React from 'react';
+
 const Page = () => {
     return (
         <div>
-           <h1>bad</h1>
+           <h2>page users</h2>
         </div>
     );
 };

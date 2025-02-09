@@ -1,11 +1,11 @@
 import {Metadata} from "next";
 
 export const metadata:Metadata={
-title:"metadata IdLayout"};
+title:"metadata Users"};
 type Props={ children:React.ReactNode }
-const IdLayout =({children}:Props)=>{
+const Users =({children}:Props)=>{
 return(
 <>
 {children}
 </>);}
-export default IdLayout;
+export default Users;
