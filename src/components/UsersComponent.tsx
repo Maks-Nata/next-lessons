@@ -1,6 +1,7 @@
 
 import {getAllUsers} from "@/services/api.services";
 import {IUser} from "@/model/IUser";
+import Link from "next/link";
 
 export const UsersComponent = async () => {
     const users=await getAllUsers()
@@ -10,10 +11,10 @@ export const UsersComponent = async () => {
         <div>
             <h2>Список пользователей</h2>
             <ul>
-                {users.map((user: IUser) => (
-                    <li key={user.id}>
-                        {user.name}
-                    </li>
+                {users.map((user: IUser) => (<li key={user.id}>
+                 <Link href={'/users/' +user.id.toString()} >
+                     {user.id}  {user.name}
+                </Link> </li>
                 ))}
             </ul>
         </div>
